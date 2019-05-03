@@ -13,6 +13,7 @@ let url = '';
 let movie = '';
 let Year = '';
 let RottenTomatoeRating = '';
+let IMDBRating = ''
 let Actors = '';
 let concertVenue = '';
 let concertCity = '';
@@ -30,12 +31,15 @@ if (actionChoice === "concert-this") {
     bandsInTown()
 } else if (actionChoice === "spotify-this-song") {
     spotifyMusic()
-    // useSpotify()
 
 } else if (actionChoice === "movie-this") {
     getMovie()
 } else if (actionChoice === "do-what-it-says") {
     randomText()
+}
+
+function inquirer() {
+    
 }
 
 function getMovie() {
@@ -47,14 +51,21 @@ function getMovie() {
         }).then((data) => {
 
             if (data.movieTitle) {
-                url = "http://www.omdbapi.com/?apikey=" + OMDBAPI + "&t=" + data.movieTitle + "" //working correctly
+                url = "http://www.omdbapi.com/?apikey=" + OMDBAPI + "&t=" + data.movieTitle + "" 
 
                 axios.get(url)
                     .then((res) => {
                         movie = res.data.Title;
                         Year = res.data.Released;
                         RottenTomatoeRating = res.data.Ratings[1].Value;
+                        IMDBRating = res.data.imdbRating
                         Actors = res.data.Actors
+
+                        console.log(`movieTitle: ${movie}`);
+                        console.log(`Year: ${Year}`);
+                        console.log(`IMDBRating: ${IMDBRating}`);
+                        console.log(`RottenTomatoeRating: ${RottenTomatoeRating}`);
+                        console.log(`Actors: ${Actors}`);
 
                         fs.appendFile('./log.txt', ` 
                         
@@ -85,8 +96,7 @@ function getMovie() {
                     .then((res) => {
 
                         console.log(`movieTitle: ${res.data.Title}`);
-                        console
-                            .log(`Year: ${res.data.Released}`);
+                        console.log(`Year: ${res.data.Released}`);
                         console.log(`IMDBRating: ${res.data.imdbRating}`);
                         console.log(`RottenTomatoeRating: ${res.data.Ratings[1].Value}`);
                         console.log(`Actors: ${res.data.Actors}`);
