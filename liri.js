@@ -1,4 +1,5 @@
 require("dotenv").config();
+let Loggers = require('./logger')
 var Spotify = require("node-spotify-api")
 var fs = require('fs')
 var keys = require("./keys.js");
@@ -23,23 +24,23 @@ let artistName = '';
 let songPreviewUrl = '';
 let albumName = '';
 let searchMe = ''
+const MovieObject = ''
+const SpotifySong = ''
+const bandInfo = ''
 
+let movieLogged = new Loggers()
+let spotifyLog = new Loggers()
+let bandlog = new Loggers()
 
 
 if (actionChoice === "concert-this") {
-
     bandsInTown()
 } else if (actionChoice === "spotify-this-song") {
     spotifyMusic()
-
 } else if (actionChoice === "movie-this") {
     getMovie()
 } else if (actionChoice === "do-what-it-says") {
     randomText()
-}
-
-function inquirer() {
-    
 }
 
 function getMovie() {
@@ -51,7 +52,7 @@ function getMovie() {
         }).then((data) => {
 
             if (data.movieTitle) {
-                url = "http://www.omdbapi.com/?apikey=" + OMDBAPI + "&t=" + data.movieTitle + "" 
+                url = "http://www.omdbapi.com/?apikey=" + OMDBAPI + "&t=" + data.movieTitle + ""
 
                 axios.get(url)
                     .then((res) => {
@@ -67,26 +68,18 @@ function getMovie() {
                         console.log(`RottenTomatoeRating: ${RottenTomatoeRating}`);
                         console.log(`Actors: ${Actors}`);
 
-                        fs.appendFile('./log.txt', ` 
-                        
-                         MovieTitle: ${movie} 
-                         Year Released: ${Year}
-                         Ratings: ${RottenTomatoeRating}
-                         Actors: ${Actors}
-                         
-                        `, (err) => {
-                            if (err) {
-                                console.log(err);
-
-                            }
-                        })
+                        MovieObject = ` 
+                        MovieTitle: ${movie} 
+                        Year Released: ${Year}
+                        Ratings: ${RottenTomatoeRating}
+                        Actors: ${Actors}
+                       `
+                        movieLogged.logMovie(MovieObject)
 
                     })
                     .catch((err) => {
-
                         console.log(err);
                     });
-
             } else {
                 let defaultmovie = "Mr. Nobody "
                 url = "http://www.omdbapi.com/?apikey=" + OMDBAPI + "&t=" + defaultmovie + ""
@@ -117,14 +110,11 @@ function spotifyMusic() {
         message: 'spotify-this-song',
         name: 'spotify'
     }).then((data) => {
-
         searchMe = JSON.stringify(data.spotify)
-
         spotifySearch()
 
     })
 }
-
 function spotifySearch() {
     spotify.search({
         type: 'track',
@@ -134,24 +124,23 @@ function spotifySearch() {
             return console.log('Error occurred: ' + err);
         }
 
-        console.log(searchMe);
-        console.log(data.tracks.items[0].album.artists[0].name);
-        console.log(data.tracks.items[1].preview_url);
-        console.log(data.tracks.items[1].album.name);
+        console.log(`Artist: ${searchMe}`);
+        console.log(`Band Name: ${data.tracks.items[0].album.artists[0].name}`);
+        console.log(`Preview URL: ${data.tracks.items[1].preview_url}`);
+        console.log(`Album Name: ${data.tracks.items[1].album.name}`);
 
         artistName = data.tracks.items[0].album.artists[0].name;
         songPreviewUrl = data.tracks.items[1].preview_url;
         albumName = data.tracks.items[1].album.name;
 
-        fs.appendFile('./log.txt', `
+        SpotifySong = `
           Track title: ${searchMe};
           Artist Name: ${data.tracks.items[0].album.artists[0].name};
           Preview URL: ${data.tracks.items[1].preview_url};
           Album: ${data.tracks.items[1].album.name};
-        `, (err) => {
-            if (err) console.log(err);
+        `
+        spotifyLog.logSpotify(SpotifySong)
 
-        })
     });
 }
 
@@ -166,33 +155,26 @@ function bandsInTown() {
         axios.get(url)
             .then((res) => {
 
-                console.log(res.data[0].venue.name);
-                console.log(res.data[0].venue.city);
-                console.log(res.data[0].datetime);
-                console.log(data.concert);
-
+                console.log(`Band Name: ${data.concert}`);
+                console.log(`Concert Venue: ${res.data[0].venue.name}`);
+                console.log(`Concert City: ${res.data[0].venue.city}`);
+                console.log(`Concert Date: ${res.data[0].datetime}`);
 
                 concertBandName = data.concert
                 concertVenue = res.data[0].venue.name;
                 concertCity = res.data[0].venue.city;
                 concertDate = res.data[0].datetime
 
-                fs.appendFile('./log.txt', ` 
-                        
+                bandInfo = `       
                 Band Name: ${concertBandName} 
                 Concert Venue: ${concertVenue}
                 Concert city: ${concertCity}
                 Concert Date: ${concertDate}
-                
-               `, (err) => {
-                    if (err) {
-                        console.log(err);
-
-                    }
-                })
+               `
+                bandlog.logBands(bandInfo)
 
             }).catch((err) => {
-                console.log(err);
+                console.log("Not found. Please  enter valid concert")
             })
     })
 }
@@ -201,13 +183,10 @@ function randomText() {
     fs.readFile('./random.txt', 'utf8', (err, data) => {
         if (err) {
             return console.log(err);
-
         } else {
-
             searchMe = data
             console.log(searchMe);
             spotifySearch()
-
         }
     })
 

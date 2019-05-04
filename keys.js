@@ -12,6 +12,3 @@ exports.omdb = {
 exports.bandsInTown = {
     bandsInTownKey: process.env.BANDS_IN_TOWN_API_KEY
 }
-
-
-//axios call to omdbapi

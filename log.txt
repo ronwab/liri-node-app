@@ -1,12 +1,3 @@
- 
-                         MovieTitle Rango  
-
-                         Year Released 04 Mar 2011 
-
-                         Ratings 88% 
-
-                         Actors Johnny Depp, Isla Fisher, Abigail Breslin, Ned Beatty
-                         
                         
                          MovieTitle Coming to America 
                          Year Released 29 Jun 1988
@@ -76,4 +67,84 @@
                          Ratings: 71%
                          Actors: Bruce Willis, Mary-Louise Parker, Heidi von Palleske, Jefferson Brown
                          
+                         
                         
+                Band Name: the roots 
+                Concert Venue: Mann Center for the Performing Arts
+                Concert city: Philadelphia
+                Concert Date: 2019-06-01T12:00:00
+                
+                
+                        
+                         MovieTitle: Tommy Boy 
+                         Year Released: 31 Mar 1995
+                         Ratings: 42%
+                         Actors: Chris Farley, David Spade, Brian Dennehy, Bo Derek
+                         
+                        
+          Track title: "Thriller";
+          Artist Name: Michael Jackson;
+          Preview URL: https://p.scdn.co/mp3-preview/4901df6e0f8bf6ce93e08df7d98a50e220c45799?cid=6d610c3ab48a4a19aec96f083c94b53c;
+          Album: Thriller 25 Super Deluxe Edition;
+        
+          Track title: "NO WOMAN NO CRY";
+          Artist Name: Bob Marley & The Wailers;
+          Preview URL: null;
+          Album: Bob Marley: No Woman, No Cry (Arr. Cello);
+        
+          Track title: I Want it That Way
+;
+          Artist Name: Backstreet Boys;
+          Preview URL: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=6d610c3ab48a4a19aec96f083c94b53c;
+          Album: Millennium;
+         
+                        
+                         MovieTitle: Coming to America 
+                         Year Released: 29 Jun 1988
+                         Ratings: 67%
+                         Actors: Paul Bates, Eddie Murphy, Garcelle Beauvais, Feather
+                         
+                        
+          Track title: "all about the benjamins";
+          Artist Name: Various Artists;
+          Preview URL: https://p.scdn.co/mp3-preview/ad55e7deaca06bb4092b1073afac18b4be9a4776?cid=6d610c3ab48a4a19aec96f083c94b53c;
+          Album: No Way Out;
+         
+                        
+                         MovieTitle: Brown Sugar 
+                         Year Released: 11 Oct 2002
+                         Ratings: 66%
+                         Actors: Taye Diggs, Sanaa Lathan, Yasiin Bey, Nicole Ari Parker
+                         
+                         
+                        
+                         MovieTitle: New Jack City 
+                         Year Released: 08 Mar 1991
+                         Ratings: 77%
+                         Actors: Wesley Snipes, Ice-T, Allen Payne, Chris Rock
+                         
+                         
+                        
+                        MovieTitle: Bird Box 
+                        Year Released: 21 Dec 2018
+                        Ratings: 63%
+                        Actors: Sandra Bullock, Trevante Rhodes, John Malkovich, Sarah Paulson
+                        
+                        
+                        MovieTitle: Hellboy 
+                        Year Released: 02 Apr 2004
+                        Ratings: 81%
+                        Actors: Ron Perlman, John Hurt, Selma Blair, Rupert Evans
+                       
+          Track title: "I can only imagine";
+          Artist Name: MercyMe;
+          Preview URL: https://p.scdn.co/mp3-preview/a1d6074cadb1d9a5fc77e1da4433268812c261cf?cid=6d610c3ab48a4a19aec96f083c94b53c;
+          Album: I Can Only Imagine (The Movie Session);
+         
+                        
+                Band Name: Mercy Me 
+                Concert Venue: MercyMe's Imagine Nation Tour / Amway Center
+                Concert city: Orlando
+                Concert Date: 2019-05-04T19:00:47
+                
+               
