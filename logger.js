@@ -4,14 +4,14 @@ class Loggers {
 
         fs.appendFile('./log.txt', movielogger, (err) => {
             if (err) {
-                console.log(err);
+                console.log("Not found. Please  enter valid Title")
             }
         })
     }
     logSpotify(spotifyLogger) {
         fs.appendFile('./log.txt', spotifyLogger, (err) => {
             if (err) {
-                console.log(err);
+                console.log("Not found. Please  enter valid Song")
             }
         })
     }
