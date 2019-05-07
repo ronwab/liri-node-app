@@ -1,6 +1,6 @@
 # Liri Node app
 
-Setup:
+##  Setup
 Below are a series of steps that the user has to follow to successfully setup the Liri-app
 1. Download node from https://nodejs.org/en/download/ and install it on your computer.
 2. While on the repo click the clone button.
@@ -12,38 +12,39 @@ Below are a series of steps that the user has to follow to successfully setup th
    c. OMDB_API_KEY= <omdb api key>
    d. BANDS_IN_TOWN_API_KEY =<band in town api key>
   
-Running the app
-OMDB .
+## Running the app
+
+### OMDB
 Within the terminal, 
-1. Type the following command  node liri.js movie-this enter movie title when prompted movie-this ex node movie-this RED . click enter
-2. The following info is returned in the console
+1. Type the following command 
+ >node liri.js movie-this <enter movie title> ex node movie-this RED . 
+2. Click enter
+3. The following info is returned in the console
 
 ![](./screenshots/movie.png)
       
-3. If user does not enter a movie title, the default movie returned is  Mr.Nobody
-  http://www.omdbapi.com/?apikey=7516c38&t=Mr. Nobody 
-      
+4. If user does not enter a movie title, the default movie returned is  Mr.Nobody
+  
       ![](./screenshots/mr%20Nobody.png)
       
-Bands in town
+### Bands in town
 Within the terminal, 
 1. Type the following command  node liri.js  concert-this <band_name> ex node liri.js  concert-this Maroon 5. Click enter.
 2. The following info is returned in the console
   ![](./screenshots/concert.png)
      
         
-Spotify App 
+###  Spotify App
 Within the terminal, 
 1. Type the following command  node liri.js spotify-this-song <song title> ex. node liri.js spotify-this-song stand by me
 2. the following info is returned
     ![](./screenshots/Track.png)
      
 
-Do what it says
+### Do what it says
 Within the terminal, 
-1. Type the following command  node liri.js do-what-it-says Click enter.
+1. Type the following command  node liri.js do-what-it-says 
+2. Click enter.
 The following info is returned
 ![](screenshots/do%20what%20it%20says.png)
-
-
       
