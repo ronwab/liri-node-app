@@ -34,9 +34,9 @@ let artistName = '';
 let songPreviewUrl = '';
 let albumName = '';
 let searchMe = ''
-const MovieObject = ''
-const SpotifySong = ''
-const bandInfo = ''
+let MovieObject = ''
+let SpotifySong = ''
+let bandInfo = ''
 
 
 

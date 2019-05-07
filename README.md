@@ -21,6 +21,12 @@ Within the terminal,
       Year Released: 15 Oct 2010
       Ratings: 71%
       Actors: Bruce Willis, Mary-Louise Parker, Heidi von Palleske, Jefferson Brown
+
+
+
+
+
+      
 3. If user does not enter a movie title, the default movie returned is  Mr.Nobody
   http://www.omdbapi.com/?apikey=7516c38&t=Mr. Nobody 
       movieTitle: Mr. Nobody
