@@ -35,18 +35,19 @@ Bands in town
 Within the terminal, 
 1. Type the following command  node liri.js  concert-this <band_name> ex node liri.js  concert-this Maroon 5. Click enter.
 2. The following info is returned in the console
-        Band Name: Maroon 5 
-        Concert Venue: Mollenpark
-        Concert city: Aalborg
-        Concert Date: 2019-06-01T19:00:44
+            Band Name: Maroon 5 
+                Concert Venue: Mollenpark
+                Concert city: Aalborg
+                Concert Date: 2019-06-01T19:00:44
         
 Spotify App 
 Within the terminal, 
 1. Type the following command  node liri.js spotify-this-song <song title> ex. node liri.js spotify-this-song stand by me
 2. the following info is returned
-   Track title: "stand by me";
+      
+          Track title: "stand by me";
           Artist Name: Ben E. King;
-          Preview URL: https://p.scdn.co/mp3-preview/94e1e88bd6e967752a5030b1cca3fff3beae8dce?    cid=6d610c3ab48a4a19aec96f083c94b53c;
+          Preview URL: https://p.scdn.co/mp3-preview/94e1e88bd6e967752a5030b1cca3fff3beae8dce?cid=6d610c3ab48a4a19aec96f083c94b53c;
           Album: Pain In My Heart;
   
   
