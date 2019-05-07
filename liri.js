@@ -38,9 +38,6 @@ let MovieObject = ''
 let SpotifySong = ''
 let bandInfo = ''
 
-
-
-
 if (actionChoice === "concert-this") {
     bandsInTown()
 } else if (actionChoice === "spotify-this-song") {
@@ -122,8 +119,42 @@ function spotifyMusic() {
         message: 'spotify-this-song',
         name: 'spotify'
     }).then((data) => {
-        searchMe = JSON.stringify(data.spotify)
-        spotifySearch()
+        if (data.spotify) {
+            searchMe = JSON.stringify(data.spotify)
+            spotifySearch()
+        } else {
+            spotify.search({
+                type: 'track',
+                query: 'ace of base the sign'
+            }, function (err, data) {
+                if (err) {
+                    return console.log('Error occurred: ' + err);
+                }
+                // console.log(data.tracks);
+
+                // console.log(`Artist: ${searchMe}`);
+                console.log(`Band Name: ${data.tracks.items[0].album.artists[0].name}`);
+                console.log(`Preview URL: ${data.tracks.items[1].preview_url}`);
+                console.log(`Album Name: ${data.tracks.items[1].album.name}`);
+
+                artistName = data.tracks.items[0].album.artists[0].name;
+                songPreviewUrl = data.tracks.items[1].preview_url;
+                albumName = data.tracks.items[1].album.name;
+
+                // creating spotify instance of object that will be logged
+                SpotifySong = `
+                  Track title: ${searchMe};
+                  Artist Name: ${data.tracks.items[0].album.artists[0].name};
+                  Preview URL: ${data.tracks.items[1].preview_url};
+                  Album: ${data.tracks.items[1].album.name};
+                `
+                //calling logspotify - in logger.js to write to log.txt
+                spotifyLog.logSpotify(SpotifySong)
+
+            });
+
+        }
+
 
     })
 }
@@ -157,6 +188,8 @@ function spotifySearch() {
         spotifyLog.logSpotify(SpotifySong)
 
     });
+
+
 }
 
 function bandsInTown() {
