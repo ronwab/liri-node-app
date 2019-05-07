@@ -17,54 +17,33 @@ OMDB .
 Within the terminal, 
 1. Type the following command  node liri.js movie-this enter movie title when prompted movie-this ex node movie-this RED . click enter
 2. The following info is returned in the console
-      MovieTitle: RED 
-      Year Released: 15 Oct 2010
-      Ratings: 71%
-      Actors: Bruce Willis, Mary-Louise Parker, Heidi von Palleske, Jefferson Brown
 
-
-
-
-
+![](./screenshots/movie.png)
       
 3. If user does not enter a movie title, the default movie returned is  Mr.Nobody
   http://www.omdbapi.com/?apikey=7516c38&t=Mr. Nobody 
-      movieTitle: Mr. Nobody
-      Year: 26 Sep 2013
-      IMDBRating: 7.8
-      RottenTomatoeRating: 67%
-      Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
       
-      
+      ![](./screenshots/mr%20Nobody.png)
       
 Bands in town
 Within the terminal, 
 1. Type the following command  node liri.js  concert-this <band_name> ex node liri.js  concert-this Maroon 5. Click enter.
 2. The following info is returned in the console
-            Band Name: Maroon 5 
-                Concert Venue: Mollenpark
-                Concert city: Aalborg
-                Concert Date: 2019-06-01T19:00:44
+  ![](./screenshots/concert.png)
+     
         
 Spotify App 
 Within the terminal, 
 1. Type the following command  node liri.js spotify-this-song <song title> ex. node liri.js spotify-this-song stand by me
 2. the following info is returned
-      
-          Track title: "stand by me";
-          Artist Name: Ben E. King;
-          Preview URL: https://p.scdn.co/mp3-preview/94e1e88bd6e967752a5030b1cca3fff3beae8dce?cid=6d610c3ab48a4a19aec96f083c94b53c;
-          Album: Pain In My Heart;
-  
-  
+    ![](./screenshots/Track.png)
+     
+
 Do what it says
 Within the terminal, 
 1. Type the following command  node liri.js do-what-it-says Click enter.
 The following info is returned
+![](screenshots/do%20what%20it%20says.png)
 
-          Track title: "I want it that way";
-          Artist Name: Backstreet Boys;
-          Preview URL: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=6d610c3ab48a4a19aec96f083c94b53c;
-          Album: Millennium;
 
       
